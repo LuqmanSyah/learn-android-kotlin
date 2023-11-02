@@ -6,11 +6,11 @@ import android.os.Bundle
 class MainActivity : AppCompatActivity() {
 
     val angkaBulat: Int? = null
-    val angkaDesimal: Double = 14.3
+    var angkaDesimal: Double = 14.3
     val angkaPanjang: Long = 90000000000000000L
 
     val karakter: Char = 'A'
-    val kata: String = "aku belajar kotlin hari ini"
+    var kata: String = "aku belajar kotlin hari ini"
 
     var benar: Boolean = true
     val salah: Boolean = false
@@ -23,8 +23,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        if (angkaBulat == 4) {
+        if (angkaBulat == 4 && angkaDesimal > 13) {
             benar = true
+            kata = "Berhasil mengubah kata"
+        } else {
+            benar = false
         }
     }
 }
