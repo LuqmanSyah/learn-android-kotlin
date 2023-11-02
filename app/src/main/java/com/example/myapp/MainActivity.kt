@@ -5,7 +5,7 @@ import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
 
-    val angkaBulat: Int? = null
+    var angkaBulat: Int = 1
     var angkaDesimal: Double = 14.3
     val angkaPanjang: Long = 90000000000000000L
 
@@ -19,6 +19,16 @@ class MainActivity : AppCompatActivity() {
     val stringArray: Array<String> = arrayOf("satu", "dua", "tiga", "empat", "lima")
     val booleanArray: Array<Boolean> = arrayOf(true, false, true, false)
 
+    fun hitung(angka1: Int, angka2: Int)
+    {
+        val jumlah = angka1 + angka2
+    }
+
+    fun increment()
+    {
+        angkaBulat++
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -29,5 +39,9 @@ class MainActivity : AppCompatActivity() {
         } else {
             benar = false
         }
+
+        hitung(1, 2)
+
+        increment()
     }
 }
