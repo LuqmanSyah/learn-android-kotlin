@@ -48,5 +48,10 @@ class MainActivity : AppCompatActivity() {
 
         val textView: TextView = findViewById(R.id.text_view)
         val btnHitung: Button = findViewById(R.id.btn_hitung)
+
+        btnHitung.setOnClickListener {
+            increment()
+            textView.text = angkaBulat.toString()
+        }
     }
 }
