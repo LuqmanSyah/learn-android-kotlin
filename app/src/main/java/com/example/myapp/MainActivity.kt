@@ -2,6 +2,8 @@ package com.example.myapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,15 +35,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        if (angkaBulat == 4 && angkaDesimal > 13) {
-            benar = true
-            kata = "Berhasil mengubah kata"
-        } else {
-            benar = false
-        }
+//        if (angkaBulat == 4 && angkaDesimal > 13) {
+//            benar = true
+//            kata = "Berhasil mengubah kata"
+//        } else {
+//            benar = false
+//        }
+//
+//        hitung(1, 2)
+//
+//        increment()
 
-        hitung(1, 2)
-
-        increment()
+        val textView: TextView = findViewById(R.id.text_view)
+        val btnHitung: Button = findViewById(R.id.btn_hitung)
     }
 }
